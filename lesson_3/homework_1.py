@@ -3,35 +3,29 @@
 пользователя, предусмотреть обработку ситуации деления на ноль.
 '''
 
-ask_number_1, ask_number_2 = 'Please enter first number:\n', 'Please enter second number:\n'
-
-def divide_func():
-    num_1, num_2 = True, True
+ask_dividend, ask_divisor = 'Please enter dividend number:\n', 'Please enter divisor number:\n'
 
 
-    def ask_input_1():
-        num_1 = input(ask_number_1)
-
-
-    def ask_input_2():
-        num_2 = input(ask_number_2)
-
-    ask_input_1()
-    ask_input_2()
-
+def number_input(ask):
+    num = input(ask)
     try:
-        int(num_1), float(num_1)
+        int(num) or float(num)
     except ValueError:
-        print('First input is wrong! Please use numbers!\n')
-        ask_input_1()
+        return False
+    return num
 
+
+'''
+if number_input(ask_dividend):
+    print(True)
+else:
+    print(False)
+
+def division(a: float, b: float) -> float:
     try:
-        int(num_2), float(num_2)
-    except ValueError:
-        print('First input is wrong! Please use numbers!\n')
-        ask_input_2()
+        return a / b
+    except ZeroDivisionError as e:
+        print('nope')
 
-    print(num_1 / num_2)
-
-
-divide_func()
+print(division(3,'a'))
+'''
