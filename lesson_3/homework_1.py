@@ -6,26 +6,49 @@
 ask_dividend, ask_divisor = 'Please enter dividend number:\n', 'Please enter divisor number:\n'
 
 
-def number_input(ask):
-    num = input(ask)
-    try:
-        int(num) or float(num)
-    except ValueError:
-        return False
+def input_number_check(message: str):
+    '''
+    Input number type check.
+    :param message: Input message (str)
+    :return: Input number (int or float)
+    '''
+    while True:
+        num = input(message)
+        try:
+            num = int(num)
+        except ValueError:
+            try:
+                num = float(num)
+            except ValueError:
+                print('Please use only numbers!')
+                pass
+            else:
+                break
+        else:
+            break
     return num
 
 
-'''
-if number_input(ask_dividend):
-    print(True)
-else:
-    print(False)
-
-def division(a: float, b: float) -> float:
+def division_func(dividend: int or float, divisor: int or float):
+    '''
+    Input numbers division function;
+    Input numbers zero division check.
+    :param dividend: dividend (int or float)
+    :param divisor: divisor (int or float)
+    :return: result of division dividend on the divisor
+    '''
     try:
-        return a / b
-    except ZeroDivisionError as e:
-        print('nope')
+        result = dividend / divisor
+    except ZeroDivisionError:
+        print('You can\'t divide by zero!')
+        return False
+    return result
 
-print(division(3,'a'))
-'''
+
+_dividend = input_number_check(ask_dividend)
+_divisor = input_number_check(ask_divisor)
+_result = division_func(_dividend, _divisor)
+
+print(f"{_dividend} / {_divisor} = {_result}" if _result else '')
+
+
