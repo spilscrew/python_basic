@@ -15,14 +15,12 @@ def int_func(text: str):
     :return: transformed to capitalize text string
     '''
     try:
-        if text.isalpha():
-            return text.capitalize()
+        if all(char.isalpha() or char.isspace() for char in text):
+            return text.title()
         else:
             raise AttributeError
     except ValueError and AttributeError:
         return 'Please use only letter symbols!'
 
 
-print(int_func('abcdefg'))
-
-# TO BE CONTINUE...
+print(int_func('abcdefg sdaf sdfds'))
