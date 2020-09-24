@@ -10,8 +10,8 @@
 
 def int_func(text: str):
     '''
-    Transform text (str) to capitalize style
-    :param text: text to capitalize transform
+    Transform text (str) to title style
+    :param text: text to capitalize transform (only alphabetical characters)
     :return: transformed to capitalize text string
     '''
     try:
