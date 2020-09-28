@@ -1,0 +1,7 @@
+Ivanov: 35000
+Petrov: 50000
+Sidorov: 19500
+Nikolaev: 24000
+Fedotova: 60000
+Bondarev: 15000
+Martinova: 100000

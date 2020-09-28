@@ -1,0 +1,5 @@
+Math: 90(l) 25(pw) 10(lab)
+Biology: 80(l) 40(pw) 20(lab)
+Sport: 5(l) 90(pw) -
+Crafts: - 60(pw) 20(lab)
+Chemistry: 60(l) - 30(lab)
