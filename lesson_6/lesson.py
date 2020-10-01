@@ -73,6 +73,3 @@ dog_2 = Dog('Bobik')
 animal_2 = Animal('Cat', 18)
 cat_1 = Cat('Barsik')
 cat_2 = Cat('Lonik')
-
-
-print(1)
