@@ -32,7 +32,7 @@ class Car:
             return f'"{direction}" is wrong direction!'
 
     def show_speed(self):
-        return self.speed
+        return f'"{self.name}" car speed is {self.speed}'
 
 
 class TownCar(Car):
@@ -94,3 +94,5 @@ police_car = PoliceCar(0)
 print(police_car.color)
 print(police_car.is_police)
 print(town_car.is_police)
+sport_car = SportCar(360, 'Pink', 'Lada')
+print(sport_car.show_speed())
